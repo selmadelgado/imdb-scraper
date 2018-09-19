@@ -12,7 +12,7 @@ function searchMovies(searchTerm) {
         $('.findResult').each(function(i, element) {
             const $element = $(element);
             const $image = $element.find('td a img');
-            const $title = $element.find('td.result_Text a');
+            const $title = $element.find('td.result_text a');
             
             //const href = $title.attr('href').match(/title\/(.*)\//)[1];
             

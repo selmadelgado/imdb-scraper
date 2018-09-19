@@ -5,7 +5,7 @@ const scraper = require('./scraper');
 
 app.get('/', (req, res) => {
     res.json({
-        message: 'Scraping is fun!'
+        message: 'Scraping is Fun!'
     });
 });
 
