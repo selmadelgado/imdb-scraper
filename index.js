@@ -10,9 +10,17 @@ function searchMovies(searchTerm) {
 
 searchMovies('star wars')
     .then(body => {
+        const movies = [];
         const $ = cheerio.load(body);
         $('.findResult').each(function(i, element) {
             const $element = $(element);
-            console.log($element.text());
+            const $image = $element.find('td a img');
+            const $title = $element.find('td.result_Text a');
+            const movie = {
+                image: $image.attr('src'),
+                title: $title.text()
+            };
+            movies.push(movie);
         });
+        console.log(movies);
     });
