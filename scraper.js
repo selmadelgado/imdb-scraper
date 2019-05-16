@@ -5,7 +5,7 @@ const searchUrl = 'https://www.imdb.com/find?s=tt&ttype=ft&ref_=fn_ft&q=';
 const movieUrl = 'https://www.imdb.com/title/';
 
 function searchMovies(searchTerm) {
-    return fetch(`${url}${searchTerm}`)
+    return fetch(`${searchUrl}${searchTerm}`)
     .then(response => response.text())
     .then(body => {
         const movies = [];
